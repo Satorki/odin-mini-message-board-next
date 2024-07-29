@@ -17,7 +17,11 @@
         <ul>
           <% messages.forEach(function(message) { %>
           <li>
-            <strong><a class="nav-link" href="/messages/<%= message.id %>"><%= message.text %></a></strong>
+            <strong
+              ><a class="nav-link" href="/messages/<%= message.id %>"
+                ><%= message.text %></a
+              ></strong
+            >
             <br />
             <em><%= message.user %>, <%= message.added.toLocaleString() %></em>
           </li>

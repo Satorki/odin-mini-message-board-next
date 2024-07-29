@@ -17,7 +17,7 @@ const currentMessageRoute = require("./routes/message");
 
 app.use("/", homeRoute);
 app.use("/new", newMessageRoute);
-app.use("/message/:id", currentMessageRoute);
+app.use("/messages", currentMessageRoute);
 
 app.listen(PORT, () => {
   console.log(`App is running on port: ${PORT}`);
