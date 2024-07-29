@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('./layout/header'); %></header>
+
+    <main>
+      <h2><%= message.text %>></h2>
+      <p>Name: <%= message.user %>></p>
+      <p>Added: <%= message.added %>></p>
+    </main>
+
+    <footer><%- include('./layout/footer'); %></footer>
+  </body>
+</html>

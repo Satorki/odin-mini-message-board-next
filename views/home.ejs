@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); %>
+  </head>
+  <body class="container">
+    <%- include('./layout/header'); %>
+
+    <main>
+      <div class="jumbotron">
+        <h2><%= title%></h2>
+        <p>
+          <a class="nav-link" href="/new"
+            ><button class="btn-primary btn">Add New Message</button></a
+          >
+        </p>
+        <ul>
+          <% messages.forEach(function(message) { %>
+          <li>
+            <strong><a class="nav-link" href="/messages/<%= message.id %>"><%= message.text %></a></strong>
+            <br />
+            <em><%= message.user %>, <%= message.added.toLocaleString() %></em>
+          </li>
+          <% })%>
+        </ul>
+      </div>
+    </main>
+
+    <footer><%- include('./layout/footer'); %></footer>
+  </body>
+</html>

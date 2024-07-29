@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./layout/head'); %>
+  </head>
+  <body class="container">
+    <header><%- include('./layout/header'); %></header>
+
+    <main>
+      <div class="jumbotron">
+        <h2>Add New Message:</h2>
+        <form method="POST" action="/new">
+          <p>Message Text:</p>
+          <input type="text" name="text" id="text" placeholder="hello.." />
+          <p>Name:</p>
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <br />
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <footer><%- include('./layout/footer'); %></footer>
+  </body>
+</html>
